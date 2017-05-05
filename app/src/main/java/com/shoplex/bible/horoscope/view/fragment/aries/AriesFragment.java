@@ -1,5 +1,6 @@
 package com.shoplex.bible.horoscope.view.fragment.aries;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.databinding.FragmentAriesBinding;
 import com.shoplex.bible.horoscope.view.activity.MainActivity;
+import com.shoplex.bible.horoscope.view.activity.aries.AriesActivity;
 import com.shoplex.bible.horoscope.view.weight.ObservableScrollView;
 
 /**
@@ -43,7 +45,13 @@ public class AriesFragment extends BaseFragment<AriesPresenter> implements Aries
         super.onCreateView(inflater, container, savedInstanceState);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_aries, container, false);
         Log.i(TAG, "yuyao AriesFragment onCreateView");
-
+        binding.rlLunckly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity,AriesActivity.class);
+                mActivity.startActivity(intent);
+            }
+        });
         binding.plProgress.showProgress();
         initSwipeLayout();
         initNet();

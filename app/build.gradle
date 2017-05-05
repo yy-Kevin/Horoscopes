@@ -22,9 +22,9 @@ android {
         enabled true
     }
 
-    defaultConfig {
-        jackOptions.enabled = true
-    }
+//    defaultConfig {
+//        jackOptions.enabled = true
+//    }
 //    compileOptions {
 //        sourceCompatibility JavaVersion.VERSION_1_8
 //        targetCompatibility JavaVersion.VERSION_1_8
@@ -36,6 +36,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //tablayout
+    compile 'com.android.support:design:23.0.1'
 
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
