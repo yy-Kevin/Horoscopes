@@ -1,9 +1,8 @@
-package com.shoplex.bible.horoscope.view.activity.aries;
+package com.shoplex.bible.horoscope.view.activity.Aries;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,7 +12,6 @@ import android.view.Window;
 
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.databinding.ActivityAriesBinding;
-import com.shoplex.bible.horoscope.view.fragment.aries.AriesFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,17 +22,19 @@ import java.util.List;
 
 public class AriesActivity extends AppCompatActivity{
 
-    private ActivityAriesBinding binding;
+    public ActivityAriesBinding binding;
                               //定义viewPager
     private FragmentPagerAdapter fAdapter;                               //定义adapter
 
     private List<Fragment> list_fragment;                                //定义要装fragment的列表
     private List<String> list_title;                                     //tab名称列表
 
-    private AriesFragment hotRecommendFragment;              //热门推荐fragment
-    private AriesFragment hotCollectionFragment;              //热门推荐fragment
-    private AriesFragment hotMonthFragment;              //热门推荐fragment
-    private AriesFragment hotToday;
+    private DataFragment hotRecommendFragment;              //热门推荐fragment
+    private DataFragment hotCollectionFragment;              //热门推荐fragment
+    private DataFragment hotMonthFragment;              //热门推荐fragment
+    private DataFragment hotToday;
+    private DataFragment hotToday1;
+    private DataFragment hotToday2;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,10 +55,12 @@ public class AriesActivity extends AppCompatActivity{
     private void initControls() {
 
         //初始化各fragment
-        hotRecommendFragment = new AriesFragment();
-        hotCollectionFragment = new AriesFragment();
-        hotMonthFragment = new AriesFragment();
-        hotToday = new AriesFragment();
+        hotRecommendFragment = new DataFragment();
+        hotCollectionFragment = new DataFragment();
+        hotMonthFragment = new DataFragment();
+        hotToday = new DataFragment();
+        hotToday1 = new DataFragment();
+        hotToday2 = new DataFragment();
 
         //将fragment装进列表中
         list_fragment = new ArrayList<>();
@@ -66,21 +68,26 @@ public class AriesActivity extends AppCompatActivity{
         list_fragment.add(hotCollectionFragment);
         list_fragment.add(hotMonthFragment);
         list_fragment.add(hotToday);
+        list_fragment.add(hotToday1);
+        list_fragment.add(hotToday2);
 
         //将名称加载tab名字列表，正常情况下，我们应该在values/arrays.xml中进行定义然后调用
         list_title = new ArrayList<>();
-        list_title.add("热门推荐");
-        list_title.add("热门收藏");
-        list_title.add("本月热榜");
-        list_title.add("今日热榜");
+        list_title.add("YesterDay");
+        list_title.add("TaDay");
+        list_title.add("Tomorrow");
+        list_title.add("Weekly");
+        list_title.add("Monthly");
+        list_title.add("Yearly");
 
         //设置TabLayout的模式
-        binding.tabLayout.setTabMode(TabLayout.MODE_FIXED);
         //为TabLayout添加tab名称
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(0)));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(1)));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(2)));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(3)));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(4)));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list_title.get(5)));
 
         fAdapter = new AriesActivity.Find_tab_Adapter(getSupportFragmentManager(),list_fragment,list_title);
 
