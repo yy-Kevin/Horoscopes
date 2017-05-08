@@ -246,7 +246,6 @@
                         android:progressTint="#ffd71b"
                         android:rating="0"
                         android:stepSize="1" />
-
                     
                     <TextView
                         android:id="@+id/tv_comment1"
