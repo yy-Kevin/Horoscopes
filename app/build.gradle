@@ -38,7 +38,9 @@ dependencies {
     })
     //tablayout
     compile 'com.android.support:design:25.3.0'
-
+    //锁屏界面
+//    compile 'cn.bingoogolapple:bga-swipebacklayout:1.0.8'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'

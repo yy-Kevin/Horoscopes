@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.sagittarius;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;

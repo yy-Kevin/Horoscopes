@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.gemini;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentLibraBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentGeminiBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class LibraFragment extends BaseFragment {
+public class GeminiFragment extends BaseFragment {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentLibraBinding binding;
+    private FragmentGeminiBinding binding;
 
-    public static LibraFragment getInstance() {
-        LibraFragment fragment = new LibraFragment();
+    public static GeminiFragment getInstance() {
+        GeminiFragment fragment = new GeminiFragment();
         return fragment;
     }
 
@@ -38,8 +38,9 @@ public class LibraFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_libra, container, false);
-        Log.i(TAG,"yuyao LibraFragment onCreateView");
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_gemini, container, false);
+
+        Log.i(TAG,"yuyao G=eminiFragment onCreateView");
         return binding.getRoot();
     }
 
@@ -53,4 +54,6 @@ public class LibraFragment extends BaseFragment {
     public void showFailedError() {
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.libra;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentPiscesBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentLibraBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class PiscesFragment extends BaseFragment {
+public class LibraFragment extends BaseFragment {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentPiscesBinding binding;
+    private FragmentLibraBinding binding;
 
-    public static PiscesFragment getInstance() {
-        PiscesFragment fragment = new PiscesFragment();
+    public static LibraFragment getInstance() {
+        LibraFragment fragment = new LibraFragment();
         return fragment;
     }
 
@@ -38,9 +38,8 @@ public class PiscesFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_pisces, container, false);
-
-        Log.i(TAG,"yuyao PiscesFragment onCreateView");
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_libra, container, false);
+        Log.i(TAG,"yuyao LibraFragment onCreateView");
         return binding.getRoot();
     }
 

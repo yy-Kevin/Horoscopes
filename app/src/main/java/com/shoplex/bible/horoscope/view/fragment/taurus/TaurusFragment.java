@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.taurus;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentCaprcornBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentTaurusBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class CaprcornFragment extends BaseFragment {
+public class TaurusFragment extends BaseFragment  {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentCaprcornBinding binding;
+    private FragmentTaurusBinding binding;
 
-    public static CaprcornFragment getInstance() {
-        CaprcornFragment fragment = new CaprcornFragment();
+    public static TaurusFragment getInstance() {
+        TaurusFragment fragment = new TaurusFragment();
         return fragment;
     }
 
@@ -38,9 +38,9 @@ public class CaprcornFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_caprcorn, container, false);
-
-        Log.i(TAG,"yuyao CaprcornFragment onCreateView");
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_taurus, container, false);
+        Log.i(TAG,"yuyao TaurusFragment onCreateView");
+//        initToolbar(R.id.tl_toolbar);
         return binding.getRoot();
     }
 
@@ -51,16 +51,6 @@ public class CaprcornFragment extends BaseFragment {
 
     @Override
     public void showFailedError() {
-
-    }
-
-    @Override
-    public void showDialog() {
-
-    }
-
-    @Override
-    public void hideDialog() {
 
     }
 }

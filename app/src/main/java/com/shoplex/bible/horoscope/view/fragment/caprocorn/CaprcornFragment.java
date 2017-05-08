@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.caprocorn;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentVirgoBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentCaprcornBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class VirgoFragment extends BaseFragment {
+public class CaprcornFragment extends BaseFragment {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentVirgoBinding binding;
+    private FragmentCaprcornBinding binding;
 
-    public static VirgoFragment getInstance() {
-        VirgoFragment fragment = new VirgoFragment();
+    public static CaprcornFragment getInstance() {
+        CaprcornFragment fragment = new CaprcornFragment();
         return fragment;
     }
 
@@ -38,9 +38,10 @@ public class VirgoFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_virgo, container, false);
-        Log.i(TAG,"yuyao VirgoFragment onCreateView");
-        return super.onCreateView(inflater, container, savedInstanceState);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_caprcorn, container, false);
+
+        Log.i(TAG,"yuyao CaprcornFragment onCreateView");
+        return binding.getRoot();
     }
 
     @Override
@@ -50,6 +51,16 @@ public class VirgoFragment extends BaseFragment {
 
     @Override
     public void showFailedError() {
+
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void hideDialog() {
 
     }
 }

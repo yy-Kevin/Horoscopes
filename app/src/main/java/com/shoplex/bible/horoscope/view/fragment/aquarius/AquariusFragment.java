@@ -3,7 +3,6 @@ package com.shoplex.bible.horoscope.view.fragment.aquarius;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +35,6 @@ public class AquariusFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_aquarius, container, false);
-        Log.i(TAG,"yuyao AquariusFragment onCreateView");
         return binding.getRoot();
     }
 

@@ -30,6 +30,13 @@
         <activity android:name=".view.activity.MainActivity" />
         <activity android:name=".zodoacMvp.ZodoacActivity" />
         <activity android:name=".view.activity.Aries.AriesActivity" />
+        <activity
+            android:name=".view.activity.LockActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.example.suoping.lockscreen"></activity>
+
+        <service android:name=".view.activity.LockServer" />
     </application>
 
 </manifest>

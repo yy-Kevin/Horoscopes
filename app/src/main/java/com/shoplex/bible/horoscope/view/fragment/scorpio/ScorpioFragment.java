@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.scorpio;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentCancerBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentScorpioBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class CancerFragment extends BaseFragment {
+public class ScorpioFragment extends BaseFragment {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentCancerBinding binding;
+    private FragmentScorpioBinding binding;
 
-    public static CancerFragment getInstance() {
-        CancerFragment fragment = new CancerFragment();
+    public static ScorpioFragment getInstance() {
+        ScorpioFragment fragment = new ScorpioFragment();
         return fragment;
     }
 
@@ -38,12 +38,11 @@ public class CancerFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_cancer, container, false);
-
-        Log.i(TAG,"yuyao CancerFragment onCreateView");
-
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_scorpio, container, false);
+        Log.i(TAG,"yuyao ScorpioFragment onCreateView");
         return binding.getRoot();
     }
+
 
     @Override
     public void toMainActivity(Object user) {
@@ -54,5 +53,4 @@ public class CancerFragment extends BaseFragment {
     public void showFailedError() {
 
     }
-
 }

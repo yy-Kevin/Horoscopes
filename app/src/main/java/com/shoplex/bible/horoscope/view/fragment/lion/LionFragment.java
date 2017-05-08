@@ -1,4 +1,4 @@
-package com.shoplex.bible.horoscope.view.fragment;
+package com.shoplex.bible.horoscope.view.fragment.lion;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.shoplex.bible.horoscope.R;
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.base.BasePresenter;
-import com.shoplex.bible.horoscope.databinding.FragmentTaurusBinding;
+import com.shoplex.bible.horoscope.databinding.FragmentLionBinding;
 
 import rx.subscriptions.CompositeSubscription;
 
@@ -19,13 +19,13 @@ import rx.subscriptions.CompositeSubscription;
  * Created by qsk on 2017/4/26.
  */
 
-public class TaurusFragment extends BaseFragment  {
+public class LionFragment extends BaseFragment {
 
     private CompositeSubscription mCompositeSubscription;
-    private FragmentTaurusBinding binding;
+    private FragmentLionBinding binding;
 
-    public static TaurusFragment getInstance() {
-        TaurusFragment fragment = new TaurusFragment();
+    public static LionFragment getInstance() {
+        LionFragment fragment = new LionFragment();
         return fragment;
     }
 
@@ -38,11 +38,12 @@ public class TaurusFragment extends BaseFragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_taurus, container, false);
-        Log.i(TAG,"yuyao TaurusFragment onCreateView");
-//        initToolbar(R.id.tl_toolbar);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_lion, container, false);
+
+        Log.i(TAG,"yuyao LionFragment onCreateView");
         return binding.getRoot();
     }
+
 
     @Override
     public void toMainActivity(Object user) {

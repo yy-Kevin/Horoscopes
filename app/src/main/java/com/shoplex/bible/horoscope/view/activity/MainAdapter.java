@@ -6,16 +6,16 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.shoplex.bible.horoscope.base.BaseFragment;
 import com.shoplex.bible.horoscope.view.fragment.aquarius.AquariusFragment;
-import com.shoplex.bible.horoscope.view.fragment.CancerFragment;
-import com.shoplex.bible.horoscope.view.fragment.CaprcornFragment;
-import com.shoplex.bible.horoscope.view.fragment.GeminiFragment;
-import com.shoplex.bible.horoscope.view.fragment.LibraFragment;
-import com.shoplex.bible.horoscope.view.fragment.LionFragment;
-import com.shoplex.bible.horoscope.view.fragment.PiscesFragment;
-import com.shoplex.bible.horoscope.view.fragment.SagittariusFragment;
-import com.shoplex.bible.horoscope.view.fragment.ScorpioFragment;
-import com.shoplex.bible.horoscope.view.fragment.TaurusFragment;
-import com.shoplex.bible.horoscope.view.fragment.VirgoFragment;
+import com.shoplex.bible.horoscope.view.fragment.cancer.CancerFragment;
+import com.shoplex.bible.horoscope.view.fragment.caprocorn.CaprcornFragment;
+import com.shoplex.bible.horoscope.view.fragment.gemini.GeminiFragment;
+import com.shoplex.bible.horoscope.view.fragment.libra.LibraFragment;
+import com.shoplex.bible.horoscope.view.fragment.lion.LionFragment;
+import com.shoplex.bible.horoscope.view.fragment.pisces.PiscesFragment;
+import com.shoplex.bible.horoscope.view.fragment.sagittarius.SagittariusFragment;
+import com.shoplex.bible.horoscope.view.fragment.scorpio.ScorpioFragment;
+import com.shoplex.bible.horoscope.view.fragment.taurus.TaurusFragment;
+import com.shoplex.bible.horoscope.view.fragment.virgo.VirgoFragment;
 import com.shoplex.bible.horoscope.view.fragment.aries.AriesFragment;
 
 import java.util.ArrayList;

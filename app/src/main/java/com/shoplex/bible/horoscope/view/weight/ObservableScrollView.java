@@ -43,5 +43,4 @@ public class ObservableScrollView extends ScrollView {
             scrollViewListener.onScrollChanged(this, x, y, oldx, oldy);
         }
     }
-
 }
